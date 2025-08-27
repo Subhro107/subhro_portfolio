@@ -262,6 +262,17 @@ body:not(.dark-theme) .profile-img {
     box-sizing: border-box;
 }
 
+/* Interactive hover effect for skill logos */
+.skills-list img {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skills-list li:hover img {
+    transform: scale(1.18) rotate(-6deg);
+    box-shadow: 0 4px 16px 0 rgba(187, 134, 252, 0.25);
+    z-index: 1;
+}
+
 /* Responsive adjustments for skills list */
 @media screen and (max-width: 768px) {
     .skills-list {
