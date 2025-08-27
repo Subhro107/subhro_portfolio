@@ -121,6 +121,7 @@ nav ul li a:hover {
     transition: all 1s ease-in-out;
 }
 
+
 .profile-img {
     width: 280px;
     height: 280px;
@@ -132,6 +133,17 @@ nav ul li a:hover {
     transform: translate(-50%, -50%);
     animation: blob 8s ease-in-out infinite;
     background-color: #1f1f1f; /* Dark background for the transparent image */
+}
+
+/* Fix: Skill name hover effect */
+.skills-list li span {
+    transition: font-size 0.3s cubic-bezier(0.4, 0, 0.2, 1), color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+}
+
+.skills-list li:hover span {
+    font-size: 1.25em;
+    color: #bb86fc;
 }
 
 /* Light mode adjustment */
