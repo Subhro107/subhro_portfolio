@@ -4,45 +4,120 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Projects | Subhro Maitra</title>
+    <meta name="description" content="Explore projects by Subhro Maitra - Software Development Portfolio">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body class="dark-theme">
     <div id="vanta-bg"></div>
-    <header>
-    </header>
 
     <nav class="floating-nav">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="projects.html" class="nav-link">Projects</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
         </ul>
         <div class="nav-slider"></div>
     </nav>
-    </header>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Sudoku Solver</h3>
-            <p>It solves any given sudoku by itself, built using Python only.</p>
-            <a href="https://github.com/Subhro107/sudoku_repo-py-" target="_blank">GitHub Repo</a>
-        </div>
-        <!-- Add more projects as needed -->
-        <div class="project">
-            <h3>Weather country</h3>
-            <p>It fetches weather information for a given country's capital using openweather API.</p>
-            <a href="https://github.com/Subhro107/Country-weather-repo" target="_blank">GitHub Repo</a>
-        </div>
-        <div class="project">
-            <h3>floatsphere</h3>
-            <p>control the graphics with palm detection</p>
-            <a href="https://github.com/Subhro107/floatsphere" target="_blank">GitHub Repo</a>
-        </div>
-    </section>
+    <main>
+        <section id="projects">
+            <div class="projects-header">
+                <h2>My Projects</h2>
+                <p class="projects-subtitle">A collection of my work showcasing various technologies and problem-solving approaches</p>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project_img/sudoku.png" alt="Sudoku Solver Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Sudoku Solver</h3>
+                        <p>An intelligent algorithm that solves any given Sudoku puzzle automatically using backtracking and constraint propagation techniques.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Algorithm</span>
+                            <span class="tag">Logic</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Subhro107/sudoku_repo-py-" target="_blank" class="project-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project_img/country.png" alt="Weather Country Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather Country</h3>
+                        <p>A web application that fetches and displays real-time weather information for any country's capital city using the OpenWeather API.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">API</span>
+                            <span class="tag">REST</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://subhro107.github.io/weather/" target="_blank" class="project-btn live-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Subhro107/Country-weather-repo" target="_blank" class="project-btn github-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/project_img/floatsphere.png" alt="FloatSphere Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>FloatSphere</h3>
+                        <p>An interactive graphics application that uses computer vision and palm detection to control floating 3D sphere animations in real-time.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Computer Vision</span>
+                            <span class="tag">Graphics</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://floatsphere.netlify.app/" target="_blank" class="project-btn live-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                            </svg>
+                            Live Demo
+                        </a>
+                        <a href="https://github.com/Subhro107/floatsphere" target="_blank" class="project-btn github-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <p>© 2025 Subhro Maitra. All rights reserved.</p>

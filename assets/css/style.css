@@ -757,3 +757,296 @@ body:not(.index-page) #about {
         padding-right: 10px;
     }
 }
+
+/* ============ PROJECTS PAGE STYLES ============ */
+.projects-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-header h2 {
+    font-size: 2.5rem;
+    color: #bb86fc;
+    margin-bottom: 15px;
+}
+
+.projects-subtitle {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: rgba(26, 26, 26, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    border: 1px solid rgba(187, 134, 252, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #bb86fc, #8c33f8);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover::before {
+    transform: scaleX(1);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(187, 134, 252, 0.5);
+    box-shadow: 0 20px 40px rgba(187, 134, 252, 0.15);
+}
+
+.project-image {
+    width: 100%;
+    height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+.project-content {
+    flex: 1;
+}
+
+.project-content h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-content h3 {
+    color: #bb86fc;
+}
+
+.project-content p {
+    color: #b0b0b0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.tag {
+    background: rgba(187, 134, 252, 0.15);
+    color: #bb86fc;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(187, 134, 252, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: rgba(187, 134, 252, 0.25);
+    border-color: #bb86fc;
+}
+
+.project-links {
+    margin-top: auto;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #bb86fc;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.project-btn.live-btn {
+    background: transparent;
+    border: 2px solid rgba(187, 134, 252, 0.5);
+    color: #bb86fc;
+}
+
+.project-btn.live-btn:hover {
+    background: rgba(187, 134, 252, 0.1);
+    border-color: #bb86fc;
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.2);
+}
+
+.project-btn.github-btn {
+    background: #bb86fc;
+    color: #fff;
+}
+
+.project-btn.github-btn:hover {
+    background: #a06be4;
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.4);
+}
+
+.project-btn:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(187, 134, 252, 0.4);
+    color: #fff;
+}
+
+.project-btn svg {
+    transition: transform 0.3s ease;
+}
+
+.project-btn:hover svg {
+    transform: rotate(360deg);
+}
+
+/* Light mode for projects */
+body:not(.dark-theme) .project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+body:not(.dark-theme) .project-card:hover {
+    border-color: rgba(124, 58, 237, 0.5);
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.1);
+}
+
+body:not(.dark-theme) .project-card::before {
+    background: linear-gradient(90deg, #7c3aed, #5b21b6);
+}
+
+body:not(.dark-theme) .projects-header h2 {
+    color: #7c3aed;
+}
+
+body:not(.dark-theme) .projects-subtitle {
+    color: #666;
+}
+
+body:not(.dark-theme) .project-content h3 {
+    color: #212529;
+}
+
+body:not(.dark-theme) .project-card:hover .project-content h3 {
+    color: #7c3aed;
+}
+
+body:not(.dark-theme) .project-content p {
+    color: #555;
+}
+
+body:not(.dark-theme) .tag {
+    background: rgba(124, 58, 237, 0.1);
+    color: #7c3aed;
+    border-color: rgba(124, 58, 237, 0.3);
+}
+
+body:not(.dark-theme) .tag:hover {
+    background: rgba(124, 58, 237, 0.2);
+    border-color: #7c3aed;
+}
+
+body:not(.dark-theme) .project-btn {
+    background: #7c3aed;
+    color: #fff;
+}
+
+body:not(.dark-theme) .project-btn.live-btn {
+    background: transparent;
+    border: 2px solid rgba(124, 58, 237, 0.5);
+    color: #7c3aed;
+}
+
+body:not(.dark-theme) .project-btn.live-btn:hover {
+    background: rgba(124, 58, 237, 0.1);
+    border-color: #7c3aed;
+}
+
+body:not(.dark-theme) .project-btn.github-btn {
+    background: #7c3aed;
+    color: #fff;
+}
+
+body:not(.dark-theme) .project-btn.github-btn:hover {
+    background: #6d28d9;
+}
+
+/* Projects page responsive */
+@media screen and (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .project-card {
+        padding: 25px;
+    }
+    
+    .projects-header h2 {
+        font-size: 2rem;
+    }
+    
+    .projects-subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-card {
+        padding: 20px;
+    }
+    
+    .project-content h3 {
+        font-size: 1.2rem;
+    }
+    
+    .project-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
